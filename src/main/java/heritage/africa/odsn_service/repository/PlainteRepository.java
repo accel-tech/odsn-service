@@ -26,13 +26,13 @@ public interface PlainteRepository extends JpaRepository<Plainte, Long> {
 //                                    @Param("plaignant") String plaignant);
 
 
-    @Query("SELECT p FROM Plainte p WHERE " +
-            "(:urgence = 'toutes' OR LOWER(p.urgence) = LOWER(:urgence)) AND " +
-            "(:region = 'toutes' OR LOWER(p.region) = LOWER(:region)) AND " +
-            "(:plaignant = 'toutes' OR LOWER(p.plaignant) = LOWER(:plaignant))")
-    List<Plainte> filtrerIgnoreCase(
-            @Param("region") String region,
-            @Param("urgence") String urgence,
-            @Param("plaignant") String plaignant);
+//    @Query("SELECT p FROM Plainte p WHERE " +
+//            "(:urgence = 'toutes' OR LOWER(p.urgence) = LOWER(:urgence)) AND " +
+//            "(:region = 'toutes' OR LOWER(p.region) = LOWER(:region)) AND " +
+//            "(:plaignant = 'toutes' OR LOWER(p.plaignant) = LOWER(:plaignant))")
+//    List<Plainte> filtrerIgnoreCase(
+//            @Param("region") String region,
+//            @Param("urgence") String urgence,
+//            @Param("plaignant") String plaignant);
 
 }

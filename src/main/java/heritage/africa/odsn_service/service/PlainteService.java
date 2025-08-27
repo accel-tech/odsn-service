@@ -16,20 +16,15 @@ public class PlainteService {
 
     public Plainte createPlainte(Plainte plainte){
 
+        plainte.setStatut("En cours de traitement");
+        plainte.setPriorite("Critique");
+        plainte.setCategorie("Fraude");
         return plainteRepository.save(plainte);
     }
 
 
 
-//    public List<Plainte> filtrerPlaintes(String statut, String priorite, String categorie, String region,
-//                                         String urgence, String canal, String type, String recherche) {
-//        return plainteRepository.filtrer(statut, priorite, categorie, region, urgence, canal, type);
-//    }
 
-
-    public List<Plainte> filtrerPlaintes(String region, String urgence, String plaignant) {
-        return plainteRepository.filtrerIgnoreCase(region, urgence, plaignant);
-    }
 
     public List<Plainte> getPlaintes(){
 

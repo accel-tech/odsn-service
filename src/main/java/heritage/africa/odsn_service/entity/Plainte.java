@@ -17,10 +17,10 @@ public class Plainte {
     private String sexe;
     private String age;
     private String identifiant;
-    private String plaignant;
+    private String typePlaignant;
     private String telephone;
     private String region;
-    private String addresse;
+    private String adresse;
     private String langue;
     private String objet;
     private String description;
@@ -29,7 +29,7 @@ public class Plainte {
    // @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy/M/dd")
     private String date;
     private String urgence;
-    private String contact;
+    private String moyenContact;
 
    // @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "HH:mm")
     private String heure;
@@ -38,17 +38,19 @@ public class Plainte {
 
     private String priorite;
 
+    private String categorie;
 
-    public Plainte(String prenom, String nom, String sexe, String age, String identifiant, String plaignant, String telephone, String region, String addresse, String langue, String objet, String description, String lieu, String canal, String date, String urgence, String contact, String heure, String statut, String priorite) {
+
+    public Plainte(String prenom, String nom, String sexe, String age, String identifiant, String typePlaignant, String telephone, String region, String adresse, String langue, String objet, String description, String lieu, String canal, String date, String urgence, String moyenContact, String heure, String statut, String priorite, String categorie) {
         this.prenom = prenom;
         this.nom = nom;
         this.sexe = sexe;
         this.age = age;
         this.identifiant = identifiant;
-        this.plaignant = plaignant;
+        this.typePlaignant = typePlaignant;
         this.telephone = telephone;
         this.region = region;
-        this.addresse = addresse;
+        this.adresse = adresse;
         this.langue = langue;
         this.objet = objet;
         this.description = description;
@@ -56,10 +58,11 @@ public class Plainte {
         this.canal = canal;
         this.date = date;
         this.urgence = urgence;
-        this.contact = contact;
+        this.moyenContact = moyenContact;
         this.heure = heure;
         this.statut = statut;
         this.priorite = priorite;
+        this.categorie =categorie;
     }
 
     public Plainte() {
@@ -97,13 +100,7 @@ public class Plainte {
         this.identifiant = identifiant;
     }
 
-    public String getPlaignant() {
-        return plaignant;
-    }
 
-    public void setPlaignant(String plaignant) {
-        this.plaignant = plaignant;
-    }
 
     public String getTelephone() {
         return telephone;
@@ -121,13 +118,7 @@ public class Plainte {
         this.region = region;
     }
 
-    public String getAddress() {
-        return addresse;
-    }
 
-    public void setAddress(String address) {
-        this.addresse = address;
-    }
 
     public String getLangue() {
         return langue;
@@ -135,14 +126,6 @@ public class Plainte {
 
     public void setLangue(String langue) {
         this.langue = langue;
-    }
-
-    public String getObject() {
-        return objet;
-    }
-
-    public void setObject(String objet) {
-        this.objet = objet;
     }
 
     public String getDescription() {
@@ -185,13 +168,6 @@ public class Plainte {
         this.urgence = urgence;
     }
 
-    public String getContact() {
-        return contact;
-    }
-
-    public void setContact(String contact) {
-        this.contact = contact;
-    }
 
     public String getHeure() {
         return heure;
@@ -217,12 +193,12 @@ public class Plainte {
         this.age = age;
     }
 
-    public String getAddresse() {
-        return addresse;
+    public String getAdresse() {
+        return adresse;
     }
 
-    public void setAddresse(String addresse) {
-        this.addresse = addresse;
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
     }
 
     public String getObjet() {
@@ -249,7 +225,34 @@ public class Plainte {
         return priorite;
     }
 
+    public String getTypePlaignant() {
+        return typePlaignant;
+    }
+
+    public void setTypePlaignant(String typePlaignant) {
+        this.typePlaignant = typePlaignant;
+    }
+
+    public String getMoyenContact() {
+        return moyenContact;
+    }
+
+    public void setMoyenContact(String moyenContact) {
+        this.moyenContact = moyenContact;
+    }
+
     public void setPriorite(String priorite) {
         this.priorite = priorite;
     }
+
+    public String getCategorie() {
+        return categorie;
+    }
+
+    public void setCategorie(String categorie) {
+        this.categorie = categorie;
+    }
+
+
+
 }

@@ -23,8 +23,6 @@ public class PlainteController {
     @PostMapping
     public  Plainte ceatePlainte(@RequestBody Plainte plainte){
 
-        plainte.setStatut("En cours de traitement");
-        plainte.setPriorite("Critique");
         return plainteService.createPlainte(plainte);
 
     }
@@ -39,14 +37,14 @@ public class PlainteController {
 
 
 
-    @GetMapping("/filter")
-    public List<Plainte> filtrerPlaintes(
-            @RequestParam(required = false) String region,
-            @RequestParam(required = false) String urgence,
-            @RequestParam(required = false) String plaignant) {
-        return plainteService.filtrerPlaintes(region, urgence, plaignant);
-
-    }
+//    @GetMapping("/filter")
+//    public List<Plainte> filtrerPlaintes(
+//            @RequestParam(required = false) String region,
+//            @RequestParam(required = false) String urgence,
+//            @RequestParam(required = false) String plaignant) {
+//        return plainteService.filtrerPlaintes(region, urgence, plaignant);
+//
+//    }
 
 
 
